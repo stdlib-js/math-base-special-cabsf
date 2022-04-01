@@ -1,0 +1,37 @@
+{
+  "name": "@stdlib/math-base-special-cabsf",
+  "version": "0.0.0",
+  "description": "Compute the absolute value of a single-precision complex floating-point number.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-cabsf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "math.abs",
+    "cabsf",
+    "cabs",
+    "abs",
+    "absolute",
+    "magnitude",
+    "modulus",
+    "distance",
+    "complex",
+    "cmplx",
+    "number"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
