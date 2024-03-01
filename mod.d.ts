@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,20 +16,31 @@
 * limitations under the License.
 */
 
-#include "stdlib/math/base/special/cabsf.h"
-#include "stdlib/math/base/special/hypotf.h"
-#include <complex.h>
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Complex64 } from '@stdlib/types/complex';
 
 /**
 * Computes the absolute value of a single-precision complex floating-point number.
 *
-* @param z       number
-* @return        result
+* ## Notes
+*
+* -   The absolute value of a complex number is its distance from zero.
+*
+* @param z - complex number
+* @returns absolute value
 *
 * @example
-* float y = stdlib_base_cabsf( 5.0+3.0*I );
-* // returns ~5.83f
+* var Complex64 = require( '@stdlib/complex-float32' );
+*
+* var v = cabsf( new Complex64( 5.0, 3.0 ) );
+* // returns ~5.83
 */
-float stdlib_base_cabsf( const float complex z ) {
-	return stdlib_base_hypotf( crealf( z ), cimagf( z ) );
-}
+declare function cabsf( z: Complex64 ): number;
+
+
+// EXPORTS //
+
+export = cabsf;
