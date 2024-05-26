@@ -33,11 +33,11 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32] floating-point number.
+> Compute the [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32/ctor] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a [complex][@stdlib/complex/float32] number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float32/ctor] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -88,10 +88,10 @@ var cabsf = require( '@stdlib/math-base-special-cabsf' );
 
 #### cabsf( z )
 
-Computes an [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32] floating-point number.
+Computes an [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32/ctor] floating-point number.
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32' );
+var Complex64 = require( '@stdlib/complex-float32-ctor' );
 
 var y = cabsf( new Complex64( 5.0, 3.0 ) );
 // returns ~5.83
@@ -110,7 +110,7 @@ var y = cabsf( new Complex64( 5.0, 3.0 ) );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32' );
+var Complex64 = require( '@stdlib/complex-float32-ctor' );
 var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var cabsf = require( '@stdlib/math-base-special-cabsf' );
 
@@ -310,7 +310,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [absolute-value]: https://en.wikipedia.org/wiki/Absolute_value
 
-[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32
+[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor
 
 <!-- <related-links> -->
 
