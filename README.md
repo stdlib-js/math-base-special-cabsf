@@ -33,11 +33,11 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32] floating-point number.
+> Compute the [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32/ctor] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a [complex][@stdlib/complex/float32] number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float32/ctor] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -58,22 +58,40 @@ which corresponds to the length of a vector from the origin to a complex value p
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-cabsf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cabsf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabsf@deno/mod.js';
+var cabsf = require( '@stdlib/math-base-special-cabsf' );
 ```
 
 #### cabsf( z )
 
-Computes an [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32] floating-point number.
+Computes an [absolute value][absolute-value] of a single-precision [complex][@stdlib/complex/float32/ctor] floating-point number.
 
 ```javascript
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
+var Complex64 = require( '@stdlib/complex-float32-ctor' );
 
 var y = cabsf( new Complex64( 5.0, 3.0 ) );
 // returns ~5.83
@@ -92,9 +110,9 @@ var y = cabsf( new Complex64( 5.0, 3.0 ) );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import cabsf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabsf@deno/mod.js';
+var Complex64 = require( '@stdlib/complex-float32-ctor' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var cabsf = require( '@stdlib/math-base-special-cabsf' );
 
 // Create a PRNG to generate uniformly distributed pseudorandom integers:
 var rand = discreteUniform( -50, 50 );
@@ -114,7 +132,93 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/cabsf.h"
+```
+
+#### stdlib_base_cabsf( z )
+
+Computes an [absolute value][absolute-value] of a single-precision complex floating-point number.
+
+```c
+#include <complex.h>
+
+float y = stdlib_base_cabsf( 5.0+3.0*I );
+// returns ~5.83f
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] float complex` input value.
+
+```c
+float stdlib_base_cabsf( const float complex z );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/cabsf.h"
+#include <stdio.h>
+#include <complex.h>
+
+int main( void ) {
+    const float complex x[] = { 3.14f+1.0f*I, -3.14f-1.0f*I, 0.0f+0.0f*I, 0.0f/0.0f+0.0f/0.0f*I };
+
+    float complex v;
+    float y;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        y = stdlib_base_cabsf( v );
+        printf( "f(%f + %f) = %f\n", crealf( v ), cimagf( v ), y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -141,7 +245,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -206,15 +310,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [absolute-value]: https://en.wikipedia.org/wiki/Absolute_value
 
-[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32/tree/deno
+[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs/tree/deno
+[@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs
 
-[@stdlib/math/base/special/cabs2f]: https://github.com/stdlib-js/math-base-special-cabs2f/tree/deno
+[@stdlib/math/base/special/cabs2f]: https://github.com/stdlib-js/math-base-special-cabs2f
 
-[@stdlib/math/base/special/absf]: https://github.com/stdlib-js/math-base-special-absf/tree/deno
+[@stdlib/math/base/special/absf]: https://github.com/stdlib-js/math-base-special-absf
 
 <!-- </related-links> -->
 
