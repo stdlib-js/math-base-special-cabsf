@@ -43,7 +43,8 @@
     "@stdlib/complex-float32-real": "^0.1.1",
     "@stdlib/math-base-special-hypotf": "^0.2.2",
     "@stdlib/types": "^0.4.1",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/complex-float32-ctor": "^0.0.2",
