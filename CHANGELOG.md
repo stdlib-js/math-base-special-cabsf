@@ -2,6 +2,74 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-03-24)
+
+<section class="features">
+
+### Features
+
+-   [`42aab9b`](https://github.com/stdlib-js/stdlib/commit/42aab9b7f3e2cb90710712f21c7e4d2b613b6a9d) - update `math/base/special/cabsf` to accept stdlib complex numbers [(#3358)](https://github.com/stdlib-js/stdlib/pull/3358)
+
+</section>
+
+<!-- /.features -->
+
+<section class="breaking-changes">
+
+### BREAKING CHANGES
+
+-   [`42aab9b`](https://github.com/stdlib-js/stdlib/commit/42aab9b7f3e2cb90710712f21c7e4d2b613b6a9d): use stdlib C complex64 dtype
+
+    -   To migrate, users should provide a value having the type `stdlib_complex64_t`, rather than a built-in C99 single-precision complex dtype. This dtype is available via the package `@stdlib/complex-float32/ctor`.
+
+</section>
+
+<!-- /.breaking-changes -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3357](https://github.com/stdlib-js/stdlib/issues/3357)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`42aab9b`](https://github.com/stdlib-js/stdlib/commit/42aab9b7f3e2cb90710712f21c7e4d2b613b6a9d) - **feat:** update `math/base/special/cabsf` to accept stdlib complex numbers [(#3358)](https://github.com/stdlib-js/stdlib/pull/3358) _(by Aayush Khanna, stdlib-bot)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Aayush Khanna
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-28)
