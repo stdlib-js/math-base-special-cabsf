@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-07)
+## Unreleased (2025-10-30)
 
 <section class="features">
 
@@ -46,6 +46,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`736b37a`](https://github.com/stdlib-js/stdlib/commit/736b37a8b66f157532e7cdb334b17e8aa789f3c8) - **chore:** add structured package data for `math/base/special/cabsf` [(#8272)](https://github.com/stdlib-js/stdlib/pull/8272) _(by Nakul Krishnakumar, Athan Reines)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`cbffd97`](https://github.com/stdlib-js/stdlib/commit/cbffd97f717891016aad4475cb076a0c6ca9a17a) - **test:** add tests for C99 edge cases [(#6519)](https://github.com/stdlib-js/stdlib/pull/6519) _(by Karan Anand)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
@@ -61,10 +62,12 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
+-   Athan Reines
 -   Karan Anand
+-   Nakul Krishnakumar
 
 </section>
 
