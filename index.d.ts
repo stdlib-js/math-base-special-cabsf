@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,25 +16,31 @@
 * limitations under the License.
 */
 
-#ifndef STDLIB_MATH_BASE_SPECIAL_CABSF_H
-#define STDLIB_MATH_BASE_SPECIAL_CABSF_H
+// TypeScript Version: 4.1
 
-#include "stdlib/complex/float32/ctor.h"
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-/*
-* If C++, prevent name mangling so that the compiler emits a binary file having undecorated names, thus mirroring the behavior of a C compiler.
-*/
-#ifdef __cplusplus
-extern "C" {
-#endif
+import { Complex64 } from '@stdlib/types/complex';
 
 /**
 * Computes the absolute value of a single-precision complex floating-point number.
+*
+* ## Notes
+*
+* -   The absolute value of a complex number is its distance from zero.
+*
+* @param z - complex number
+* @returns absolute value
+*
+* @example
+* var Complex64 = require( '@stdlib/complex-float32-ctor' );
+*
+* var v = cabsf( new Complex64( 5.0, 3.0 ) );
+* // returns ~5.83
 */
-float stdlib_base_cabsf( const stdlib_complex64_t z );
+declare function cabsf( z: Complex64 ): number;
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif // !STDLIB_MATH_BASE_SPECIAL_CABSF_H
+// EXPORTS //
+
+export = cabsf;
